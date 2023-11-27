@@ -1,0 +1,35 @@
+<!--
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h1>Filtro de busqueda</h1>
+        <ion-item>
+          <ion-select label="Tipo de empleo" placeholder="Selecciona"  interface="popover" >
+            <ion-select-option value="apple">En la ciudad</ion-select-option>
+            <ion-select-option value="banana">Extranjero</ion-select-option>
+            <ion-select-option value="orange">Fuera de la ciudad</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Grado Academico" placeholder="Selecciona" interface="popover" >
+            <ion-select-option value="apple">Preparatoria o Bachillerato</ion-select-option>
+            <ion-select-option value="banana">Licenciatura</ion-select-option>
+            <ion-select-option value="orange">Ingeneria</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Sectores de Servicio" placeholder="Selecciona" interface="popover" >
+            <ion-select-option value="apple">Privado</ion-select-option>
+            <ion-select-option value="banana">Publico</ion-select-option>
+            <ion-select-option value="orange">Informal</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+        <ion-button color="danger" >Cancelar</ion-button>
+        <ion-button color="success" slot="end">Aceptar</ion-button>
+      </ion-item>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+-->

@@ -1,0 +1,100 @@
+#container-header{
+    background: #faf0e4;
+}
+
+#color{
+    color: #000;
+}
+
+
+#container-header .container-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-logo .logo{
+    display: flex;
+    height: 200px;
+}
+
+#input{
+    margin: 20px 0;
+
+}
+
+#j{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#a{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#link{
+    color: #6f9572;
+
+}
+
+#boton{
+    --background: #336b87;
+}
+
+#container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 50px 0;
+  }
+
+  #title-b{
+    font-weight: 300;
+    margin: 20px 0;
+    font-size: 25px;
+    color: #000;
+
+}
+
+#centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icons{
+    width: 75px;
+    height: 75px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#icons-f{
+    width: 75px;
+    height: 75px;
+    background: #fff;
+    border: 1px solid #3d6ad6;
+    border-radius: 50%;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,99 @@
+
+
+ion-icon{
+    font-size: 30px;
+}
+
+#col {
+    text-align: center;
+  }
+
+.col{
+    text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px; /* Establecer el ancho máximo según tus preferencias */
+  margin: 0 auto; /* Centrar el video en el contenedor */
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajustar el tamaño del video manteniendo la proporción de aspecto */
+  display: block; /* Eliminar espacios adicionales debajo del video */
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta según sea necesario */
+  overflow: hidden;
+}
+
+.image-container img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+  .text-overlay {
+    position: absolute;
+    padding: 10px;
+  }
+
+  ion-toolbar {
+    --background: #19422d00;
+    --color: white;
+  }
+
+  .text-overlay-f {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;    
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el fondo según sea necesario */
+  }
+
+  /* tab1.page.scss */
+
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    height: 94vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: var(--ion-margin);
+    margin-top: var(--ion-margin);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  touch-action: manipulation;
+}
+
+
+
+
+
+

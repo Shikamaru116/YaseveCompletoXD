@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="b">
+    <h2>Informacion personal</h2>
+    <ion-input [(ngModel)]="userData.name" label="Nombre Completo" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.empleo" label="Tipo de empleo" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.estudios" label="Grado academico" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.servicios" label="Sectores de Servicio" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.email" label="Correo electronico" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.descripcion" label="Descripcion" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+  </div>
+
+  <div id="b">
+    <h4>Agregar Redes Sociales</h4>
+    <ion-input [(ngModel)]="userData.facebook"  label="Facebook" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.instagram"  label="Instagram" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+    <ion-input [(ngModel)]="userData.twitter"  label="Twitter (X)" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+
+    <ion-button (click)="updateProfile()" color="success">Actualizar</ion-button>
+
+  </div>
+
+
+
+
+
+</ion-content>

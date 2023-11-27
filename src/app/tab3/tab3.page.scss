@@ -1,0 +1,100 @@
+#container-header {
+  display: flex;
+}
+
+.icon {
+  padding: 20px 10px;
+  font-size: 40px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+ion-grid ion-row ion-col ion-icon {
+  font-size: 50px;
+}
+
+ion-grid ion-row ion-col {
+  font-size: 15px;
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+ion-card-content ion-row ion-col ion-icon {
+  font-size: 40px;
+  padding: 10px 0;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+ion-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ion-col {
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+  position: relative;
+
+  .video-container {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    video {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+
+      &.enlarged {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.video-container video.enlarged {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  z-index: 1000; /* Ajusta según sea necesario para que esté por encima de los demás elementos */
+}

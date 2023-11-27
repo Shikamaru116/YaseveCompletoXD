@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Sección de información del perfil -->
+  <ion-card *ngIf="userProfile">
+    <ion-card-header>
+      <ion-avatar class="profile-avatar">
+        <img [src]="userProfile.profileImageURL" alt="User Profile Image">
+      </ion-avatar>
+      <ion-title>
+        @{{ userProfile?.username }}
+      </ion-title>
+      <ion-card-title class="profile-name">
+        {{ userProfile?.name }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Email: {{ userProfile?.email }}</p>
+      <p>Empleo: {{ userProfile?.empleo }}</p>
+      <p>Estudios: {{ userProfile?.estudios }}</p>
+      <!-- Agrega más detalles según tus necesidades -->
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col *ngIf="userProfile?.facebook">
+        <ion-icon aria-hidden="true" name="logo-facebook" (click)="redirectToLink(userProfile.facebook)"></ion-icon>
+      </ion-col>
+      <ion-col *ngIf="userProfile?.instagram">
+        <ion-icon aria-hidden="true" name="logo-instagram" (click)="redirectToLink(userProfile.instagram)"></ion-icon>
+      </ion-col>
+      <ion-icon name="logo-twitter" class="twitter-icon" *ngIf="userProfile?.twitter" (click)="redirectToLink(userProfile.twitter)"></ion-icon>
+    </ion-row>
+
+    <ion-card-content>
+      <p>Servicios: {{ userProfile?.servicios }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección de videos del perfil -->
+  <ion-card-content *ngIf="userVideos?.length > 0">
+    <ion-card-title>Mis videos</ion-card-title>
+    <ion-row>
+      <ion-col size="6" *ngFor="let video of userVideos">
+        <div class="video-container" (click)="playAndToggle(video.videoURL, $event)">
+          <video width="100%" height="100%" controls muted>
+            <source [src]="video.videoURL" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-content>

@@ -1,0 +1,17 @@
+#a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#b{
+    margin: 10px 20px;
+}
+
+#b ion-input{
+    margin: 20px 0;
+}

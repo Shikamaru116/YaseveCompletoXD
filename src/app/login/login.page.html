@@ -1,0 +1,58 @@
+
+
+<ion-content [fullscreen]="true">
+
+
+  <div id="container-header">
+
+    <div class="container-logo">
+      <img src="assets/icon/Logo.png" class="logo">
+    </div>
+
+    <ion-segment value="default">
+
+      <ion-segment-button value="default" [routerLink]="['/login']">
+        <ion-label id="color">Iniciar Sesion</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="segment"  [routerLink]="['/registrer']">
+        <ion-label id="color">Crear Cuenta</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+
+
+    <ion-card>
+      <ion-card-header>
+
+     <ion-input [(ngModel)]="email" label="Correo Electronico" label-placement="floating" fill="outline" shape="round"  id="input"></ion-input>
+     <ion-input [(ngModel)]="password" label="Contraseña" label-placement="floating" fill="outline" shape="round" id="input" type="password"></ion-input>
+     <ion-button type="submit" shape="round" id="submit" [disabled]="!isFormValid()" (click)="submit()">Ingresar</ion-button>
+
+      </ion-card-header>
+
+
+      <div id="a">
+        ¿No tienes una cuenta? <a id="link" [routerLink]="['/registrer']">Registrate</a>
+      </div>
+
+    </ion-card>
+
+
+    <div id="container-card">
+
+      <ion-card-header>
+        <ion-card-title id="title-b">Inicia Sesion con..</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div id="centrar">
+          <div  id="icons">
+            <img (click)="loginwithGoogle()" src="assets/icon/google.png" alt="" width="50px" >
+          </div>
+        </div>
+      </ion-card-content>
+    </div>
+
+</ion-content>
